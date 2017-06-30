@@ -1,18 +1,12 @@
 # codetest
-This project exists to serve as the server component of a code test. The project serves a HTTP json response from URL http://localhost:8080. The response will contain lotteries, game types and game offers.
+This project exists to serve as the server component of a code test. The project serves a HTTP json response from URL [http://localhost:8080](http://localhost:8080). The response will contain lotteries, game types and game offers.
 
 The json document is in the /json directory of this project.
 
 The project is written in golang. To build and run the example you will need to install [docker](https://docs.docker.com/engine/installation/).
 
 # Build
-There are two build methods. One for local use and one for container use. To improve use Local build for code testers please use container build.
-
-## Local build
-
-```bash
-go get -v ./... && go build -v
-```
+Before you run the container you need to build the source code for the conainer.
 
 ## Container build
 
@@ -33,7 +27,14 @@ To access [http://localhost:8080](http://localhost:8080)
 
 # Development
 
+## Git 
 Add git hooks
 ```bash
 ln -s `pwd`/hooks/pre-commit .git/hooks
+```
+
+## Local build
+
+```bash
+go get -v ./... && go build -v
 ```
