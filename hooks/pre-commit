@@ -17,7 +17,7 @@ fi
 
 golintpath=$(which golint)
 if [ -z $golintpath ]; then
-	echo "No golint, please add to path";
+	echo "No golint, please add to path" >&2;
 	exit 1;
 fi
 
