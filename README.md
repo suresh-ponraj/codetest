@@ -1,5 +1,5 @@
 # codetest
-This project exists to serve as the server component of a code test. The project serves a HTTP json response from URL [http://localhost:8080](http://localhost:8080). The response will contain lotteries, game types and game offers.
+This project exists to serve as the server component of a code test. The project serves a HTTP json response from URL [http://localhost:8080](http://localhost:8080). The [response](json/response.json) will contain lotteries, game types and game offers.
 
 The json document is in the /json directory of this project.
 
