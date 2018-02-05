@@ -3,9 +3,12 @@ package main
 
 import (
 	"github.com/gorilla/mux"
+
 	"io/ioutil"
 	"log"
 	"net/http"
+
+	"Jumbo/lottery"
 )
 
 func baseHandler(w http.ResponseWriter, r *http.Request) {
@@ -19,5 +22,6 @@ func main() {
 	r := mux.NewRouter()
 	log.Println("Waiting...")
 	r.HandleFunc("/", baseHandler)
-	log.Fatal(http.ListenAndServe(":80", r))
+	r.Handle("/lottery", lottery.LotteryGet()).Methods("GET")
+	log.Fatal(http.ListenAndServe(":3000", r))
 }
