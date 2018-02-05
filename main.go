@@ -8,7 +8,7 @@ import (
 	"log"
 	"net/http"
 
-	"Jumbo/lottery"
+	"codetest/lottery"
 )
 
 func baseHandler(w http.ResponseWriter, r *http.Request) {
@@ -22,6 +22,6 @@ func main() {
 	r := mux.NewRouter()
 	log.Println("Waiting...")
 	r.HandleFunc("/", baseHandler)
-	r.Handle("/lottery", lottery.LotteryGet()).Methods("GET")
+	r.Handle("/lottery", lottery.Get()).Methods("GET")
 	log.Fatal(http.ListenAndServe(":3000", r))
 }

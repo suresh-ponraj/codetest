@@ -7,7 +7,10 @@ import (
 	"net/http"
 )
 
-func LotteryGet() http.Handler {
+// Get method will filter the json data based on the ticket type
+// and key value and return the response so that it can be showed to the
+// customer.
+func Get() http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 
 		w.Header().Set("Content-Type", "application/json")
